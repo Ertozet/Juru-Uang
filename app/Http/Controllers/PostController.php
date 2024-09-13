@@ -13,8 +13,8 @@ class PostController extends Controller
         $request->validate([
             'tanggal' => 'required|date',
             'kategori' => 'required|string',
-            'jumlah' => 'required|numeric',
-            'keterangan' => 'nullable|string',
+            'jumlah' => 'required|integer',
+            'keterangan' => 'nullable|bigInteger ',
             'bodoa' => 'required'
            ]);
        

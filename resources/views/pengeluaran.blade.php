@@ -61,8 +61,7 @@
                 </select></div>
               <div class="mb-3">
                 <label for="jumlah" class="form-label">Jumlah</label>
-                <label for="jumlah" class="form-label">Jumlah</label>
-                <input type="text" name="jumlah" class="form-control" id="jumlah" oninput="formatNumber(this)" >
+                <input type="number" name="jumlah" class="form-control" id="jumlah" oninput="formatNumber(this)" >
                 </div>
               <div class="mb-3">
                 <label for="Keterangan" class="form-label">Keterangan</label>

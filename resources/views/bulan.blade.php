@@ -70,12 +70,13 @@
 
           $today = \Carbon\Carbon::now()->format('Y-m');
           $bgColor = $today === $month ? 'bg-warning' : 'bg-secondary';
+          $Color = $today === $month ? '#000000' : '#ffffff';
         @endphp
           <div  style="background-color:rgb(255, 255, 255)" class=" text-center ">
             <div class="container text-center">
                 <div class="row">
                 <div class="col">
-                  <h5 class="{{ $bgColor }} rounded p-2 mt-2" style="color:rgb(255, 255, 255)">{{ $monthName }}</h5>
+                  <h5 class="{{ $bgColor }} rounded p-2 mt-2" style="color:{{ $Color }}">{{ $monthName }}</h5>
                 </div>
                 <div class="col mt-3">
                   <h5 style="color:green">Rp. {{ number_format($pemasukan, 0, ',', '.') }}</h5>

@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('kategori');
             $table->string('bodoa');
             $table->text('keterangan')->nullable();
-            $table->decimal('jumlah', 15, 2);
+            $table->bigInteger ('jumlah');
             $table->timestamps();
         
         });

@@ -57,7 +57,7 @@
                 </select></div>
               <div class="mb-3">
                 <label for="jumlah" class="form-label">Jumlah</label>
-                <input type="text" name="jumlah"  class="form-control" x-data x-mask:dynamic="$money($input, ',')" id="jumlah" >
+                <input type="number" name="jumlah"  class="form-control" x-data x-mask:dynamic="$money($input, ',')" id="jumlah" >
               </div>
               <div class="mb-3">
                 <label for="Keterangan" class="form-label">Keterangan</label>
