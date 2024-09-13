@@ -52,7 +52,6 @@
                   <option value="Penghargaan">Penghargaan</option>
                   <option value="Penjualan">Penjualan</option>
                   <option value="Penyewaan">Penyewaan</option>
-                  <option value="penyaluran">Penyaluran</option>
                   <option value="Tabungan">Tabungan</option>
                   <option value="Lain-lain">Lain-lain</option>
                 </select></div>
