@@ -12,8 +12,8 @@ class JuangController extends Controller
     public function index()
     {
         $juangs = Juang::all()->groupBy('formatted_date');
-        $pemasukan = Juang::where('bodoa', 'Pemasukan')->sum('jumlah');
-        $pengeluaran = Juang::where('bodoa', 'Pengeluaran')->sum('jumlah');
+        $pemasukan = Juang::where('kategori', 'Pemasukan')->sum('jumlah');
+        $pengeluaran = Juang::where('kategori', 'Pengeluaran')->sum('jumlah');
         $saldo = $pemasukan - $pengeluaran;
         
 

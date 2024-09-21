@@ -38,6 +38,10 @@
         </li>
     </ul>
     
+    @php
+    $pemasukan = App\Models\Juang::all()->where('bodoa', 'Pemasukan')->sum('jumlah');
+    $peng = App\Models\Juang::all()->where('bodoa', 'Pengeluaran')->sum('jumlah');
+    @endphp
     
     <div style="background-color:rgb(255, 255, 255)" class="text-center">
         <div class="container text-center">
@@ -48,17 +52,17 @@
                 </div>
                 <div class="col">
                     Pengeluaran
-                    <h5 style="color:red">Rp. {{ number_format($pengeluaran, 0, ',', '.') }}</h5>
+                    <h5 style="color:red">Rp. {{ number_format($peng, 0, ',', '.') }}</h5>
                 </div>
                 <div class="col">
                     Saldo
-                    <h5>Rp. {{ number_format($pemasukan - $pengeluaran, 0, ',', '.') }}</h5>
+                    <h5>Rp. {{ number_format($pemasukan - $peng, 0, ',', '.') }}</h5>
                 </div>
             </div>
         </div>
     </div>
     
-    @if($pemasukan == 0 && $pengeluaran == 0)
+    @if($pemasukan == 0 && $peng == 0)
     <div class="container d-flex justify-content-center align-items-center" style="height: 70vh;">
         <div class="text-center">
              <h3 style="color:#3F4743">Jangan Malas Memanajemen Keuangan</h3>
