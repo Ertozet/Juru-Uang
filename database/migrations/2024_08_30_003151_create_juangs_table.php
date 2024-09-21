@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->date('tanggal');
             $table->string('kategori');
-            $table->string('bodoa');
+            $table->string('saldo');
             $table->text('keterangan')->nullable();
             $table->bigInteger ('jumlah');
             $table->timestamps();

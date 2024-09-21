@@ -15,14 +15,14 @@ class PostController extends Controller
             'kategori' => 'required|string',
             'jumlah' => 'required|numeric',           
             'keterangan' => 'nullable|string',
-            'bodoa' => 'required'
+            'saldo' => 'required'
            ]);
        
        Juang::create([
         'tanggal' => carbon::parse($request->tanggal)->format('Y-m-d'),'kategori' => $request ->kategori,
            'jumlah' => $request ->jumlah,
            'keterangan'=> $request ->keterangan,
-           'bodoa' => $request -> bodoa,
+           'saldo' => $request -> saldo,
        ]);
        return redirect()->route('Hari');
     }
